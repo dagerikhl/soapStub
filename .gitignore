@@ -47,4 +47,9 @@ Temporary Items
 .apdisk
 node_modules
 
-.idea
+# Editors
+.idea/
+.vscode/
+
+# Result
+/result.js

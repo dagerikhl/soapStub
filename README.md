@@ -1,3 +1,5 @@
+Forked from https://github.com/benerone/soapStub, credit to benerone.
+
 Simple node script to generate Server Stub for package soap (https://www.npmjs.com/package/soap)
 
 ### Install: ###

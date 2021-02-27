@@ -9,13 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "command-line-args": "^3.0.1",
-    "fibers": "^1.0.15",
+    "command-line-args": "5.1.1",
+    "fibers": "5.0.0",
     "handlebars": "^4.0.5",
     "js-beautify": "^1.6.4",
-    "soap": "^0.19.0"
+    "soap": "0.36.0"
   },
   "bin": {
     "soapsstub": "./index.js"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }
