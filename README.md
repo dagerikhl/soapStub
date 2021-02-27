@@ -2,7 +2,7 @@ Forked from https://github.com/benerone/soapStub, credit to benerone.
 
 Simple node script to generate Server Stub for package soap (https://www.npmjs.com/package/soap)
 
-### Install: ###
+### Install:
 
 Clone this repository then
 
@@ -10,12 +10,11 @@ Clone this repository then
 npm install
 ```
 
-### Requirements: ###
+### Requirements:
 
 node version >=6
 
-### Usage exemples: ###
-
+### Usage exemples:
 
 ```
 node index.js -i yourFile.wsdl -o result.js
@@ -29,15 +28,14 @@ node index.js -i https://svn.apache.org/repos/asf/airavata/sandbox/xbaya-web/tes
 
 The second exemple generate:
 
-
 ```
-var services = { /* Services */
+const services = { /* Services */
 
   Calculator: { /* Ports */
 
     CalculatorHttpsSoap11Endpoint: { /* Methods */
 
-      add: function(args, callback, headers, req) {
+      add: (args, callback, headers, req) => {
         /*
           args = {
                  n1 of type xs:int
@@ -56,7 +54,7 @@ var services = { /* Services */
     },
     CalculatorHttpSoap11Endpoint: { /* Methods */
 
-      add: function(args, callback, headers, req) {
+      add: (args, callback, headers, req) => {
         /*
           args = {
                  n1 of type xs:int
@@ -75,7 +73,7 @@ var services = { /* Services */
     },
     CalculatorHttpSoap12Endpoint: { /* Methods */
 
-      add: function(args, callback, headers, req) {
+      add: (args, callback, headers, req) => {
         /*
           args = {
                  n1 of type xs:int
@@ -94,7 +92,7 @@ var services = { /* Services */
     },
     CalculatorHttpsSoap12Endpoint: { /* Methods */
 
-      add: function(args, callback, headers, req) {
+      add: (args, callback, headers, req) => {
         /*
           args = {
                  n1 of type xs:int
@@ -114,17 +112,16 @@ var services = { /* Services */
   }
 };
 ```
-### Use workflow: ###
+
+### Use workflow:
 
 Requirements: wsdl
 
 From your wsdl which is your service specifications, you generate webservice skeleton (see above).
 
-Once you've done this, code the behavior part of your service (replace ```//Your code``` with your code).
+Once you've done this, code the behavior part of your service (replace `//Your code` with your code).
 
 Now, you have your wsdl and your service. Follow exemple provided at https://github.com/vpulim/node-soap#soaplistenserver-path-services-wsdl---create-a-new-soap-server-that-listens-on-path-and-provides-services
-and replace the service by your service and 'myservice.wsdl' by your wsdl. 
+and replace the service by your service and 'myservice.wsdl' by your wsdl.
 
 That'all.
-
-
